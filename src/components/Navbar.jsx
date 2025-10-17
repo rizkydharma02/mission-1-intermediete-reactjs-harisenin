@@ -1,4 +1,3 @@
-import React from 'react';
 import { dataIcons } from '../assets/icons/dataIcons';
 const Navbar = () => {
   return (

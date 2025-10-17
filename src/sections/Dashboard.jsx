@@ -1,8 +1,8 @@
-import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import CardWatchList from '../components/CardWatchList';
 import CardMovieList from '../components/CardMovieList';
+import Footer from '../components/Footer';
 
 const Dashboard = () => {
   return (
@@ -17,6 +17,7 @@ const Dashboard = () => {
         <CardMovieList title="Film Trending" display="none" />
         <CardMovieList title="Rilis Baru" display="block" />
       </main>
+      <Footer />
     </>
   );
 };

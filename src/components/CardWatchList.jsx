@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { dataDesktop } from '../assets/img/desktop/dataDesktop';
+import { useState } from 'react';
+import { dataDesktop } from '../constant/dataDesktop';
 import { dataIcons } from '../assets/icons/dataIcons';
 
 const CardWatchList = () => {
@@ -10,7 +10,7 @@ const CardWatchList = () => {
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev < dataDesktop.length ? prev + 1 : prev));
+    setCurrentIndex((prev) => (prev < dataDesktop.length - 3 ? prev + 1 : prev));
   };
 
   return (

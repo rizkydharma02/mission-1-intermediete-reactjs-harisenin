@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { dataIcons } from '../assets/icons/dataIcons';
-import { filmsData } from '../assets/img/films/filmsData';
+import { dataFilms } from '../constant/dataFilms';
 
 const CardMovieList = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -11,7 +11,7 @@ const CardMovieList = (props) => {
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev < filmsData.length - 3 ? prev + 1 : prev));
+    setCurrentIndex((prev) => (prev < dataFilms.length - 3 ? prev + 1 : prev));
   };
 
   const { title, display } = props;
@@ -31,7 +31,7 @@ const CardMovieList = (props) => {
 
         <button
           onClick={handleNext}
-          disabled={currentIndex >= filmsData.length - 3}
+          disabled={currentIndex >= dataFilms.length - 3}
           className="hidden md:block top-1/2 right-[-20px] z-10 absolute bg-[#2F3334] hover:bg-gray-700 disabled:opacity-50 rounded-full w-12 h-12 transition-all -translate-y-1/2 translate-x-4 disabled:cursor-not-allowed"
           aria-label="Next"
         >
@@ -39,7 +39,7 @@ const CardMovieList = (props) => {
         </button>
         <div className="overflow-hidden">
           <div className="flex gap-[16px] md:gap-[28px] transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${currentIndex * (234 + 28)}px)` }}>
-            {filmsData.map((item) => (
+            {dataFilms.map((item) => (
               <div key={item.id} className="group relative flex-shrink-0 rounded-[8px] w-auto h-auto overflow-hidden cursor-pointer" onMouseEnter={() => setHoverId(item.id)} onMouseLeave={() => setHoverId(null)}>
                 <img src={item.img} className="w-[95px] md:w-[234px] h-[145px] md:h-[365px] object-cover group-hover:scale-105 transition-transform duration-300" alt={item.title} />
 

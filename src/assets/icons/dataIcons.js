@@ -12,6 +12,7 @@ import avatar from './avatar.png';
 import logo from './logo.png';
 import play from './play.png';
 import checklist from './checklist.png';
+import arrowRightFooter from './arrow-right-footer.png';
 
 export const dataIcons = {
   logo,
@@ -28,4 +29,5 @@ export const dataIcons = {
   logoMovieIcon,
   play,
   checklist,
+  arrowRightFooter,
 };
